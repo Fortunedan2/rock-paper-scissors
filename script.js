@@ -5,14 +5,15 @@ function getComputerChoice(computerChoice = ['rock', 'paper', 'scissors']) {
 
 // console.log(getComputerChoice());
 
-let getPlayerChoice = prompt(("Choose your weapon: "));
-const playerSelection = getPlayerChoice;
-console.log("You chose " + getPlayerChoice);
 
-const computerSelection = getComputerChoice();
-console.log("Computer chose " + computerSelection);
     
 function playRound() {
+    let getPlayerChoice = prompt(("Choose your weapon: "));
+    const playerSelection = getPlayerChoice;
+    console.log("You chose " + getPlayerChoice);
+
+    const computerSelection = getComputerChoice();
+    console.log("Computer chose " + computerSelection);
     
     if (playerSelection == "rock") {
         message = "You lose! Paper beats Rock";
@@ -24,6 +25,10 @@ function playRound() {
 
 function game() {
     return playRound()
+}
+
+for (let i = 0; i < 4; i++) {
+    game();
 }
 
 

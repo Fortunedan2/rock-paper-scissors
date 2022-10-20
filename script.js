@@ -5,10 +5,12 @@ function getComputerChoice(computerChoice = ['rock', 'paper', 'scissors']) {
 
 // console.log(getComputerChoice());
 
-    //let getPlayerChoice = prompt(("Choose your weapon: "));
-   
-    const playerSelection = "rock";
-    const computerSelection = getComputerChoice();
+let getPlayerChoice = prompt(("Choose your weapon: "));
+const playerSelection = getPlayerChoice;
+console.log("You chose " + getPlayerChoice);
+
+const computerSelection = getComputerChoice();
+console.log("Computer chose " + computerSelection);
     
 function playRound() {
     
@@ -19,11 +21,10 @@ function playRound() {
  }
 }
 
-game = playRound(playerSelection, computerSelection);
 
-for (let i = 0; i < 5; i++) {
-    message = "Try again!";
+function game() {
+    return playRound()
 }
 
 
-console.log(game);
+console.log(game());

@@ -42,6 +42,10 @@ function playRound() {
     else if (getPlayerChoice == "rock" && computerSelection == "scissors") {
         console.log('You win! Rock beats scissors');
 }
+
+    else if (getPlayerChoice != "rock", "paper", "scissors") {
+        alert('Seems you made a wrong choice');
+    }
 } 
 
 function game() {

@@ -7,31 +7,31 @@ function computerChoice() {
 function playRound() {
     const human = prompt("Choose your weapon: ").toLocaleLowerCase();
    
-    console.log("You chose " + human);
+    alert("You chose " + human);
 
     const computerPlay = computerChoice();
-    console.log("Computer chose " + computerPlay);
+    alert("Computer chose " + computerPlay);
     
     if (human == computerPlay) {
-        console.log("Oh! It's a tie");
+        alert("Oh! It's a tie");
  }  
     else if (human == "rock" && computerPlay == "paper") {
-        console.log('You lose! Paper beats rock');
+        alert('You lose! Paper beats rock');
  }
     else if (human == "paper" && computerPlay == "rock") {
-        console.log('You win! Paper beats rock');
+        alert('You win! Paper beats rock');
 }
     else if (human == "paper" && computerPlay == "scissors") {
-        console.log('You lose! Scissors beats Paper');
+        alert('You lose! Scissors beats Paper');
 }
     else if (human == "scissors" && computerPlay == "paper") {
-        console.log('You win! Scissors beats Paper');
+        alert('You win! Scissors beats Paper');
 }
     else if (human == "scissors" && computerPlay == "rock") {
-        console.log('You lose! Rock beats scissors');
+        alert('You lose! Rock beats scissors');
 }
     else if (human == "rock" && computerPlay == "scissors") {
-        console.log('You win! Rock beats scissors');
+        alert('You win! Rock beats scissors');
 }
     else if (human != "rock", "paper", "scissors") {
         alert('Seems you made a wrong choice');

@@ -1,35 +1,54 @@
-function getComputerChoice(computerChoice = ['rock', 'paper', 'scissors']) {
-    const computerRandom = computerChoice[Math.floor(Math.random() * computerChoice.length)]
-    return computerRandom;
+const choices = ['rock', 'paper', 'scissors'];
+const beats = {'rock': 'paper', 'paper': 'scissors', 'scissors': 'rock'};
+
+function computerChoice() {
+   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-// console.log(getComputerChoice());
-
+// console.log(computerChoice());
 
     
 function playRound() {
-    let getPlayerChoice = prompt(("Choose your weapon: "));
-    const playerSelection = getPlayerChoice;
+    const getPlayerChoice = prompt("Choose your weapon: ").toLocaleLowerCase();
+   
     console.log("You chose " + getPlayerChoice);
 
-    const computerSelection = getComputerChoice();
+    const computerSelection = computerChoice();
     console.log("Computer chose " + computerSelection);
     
-    if (playerSelection == "rock") {
-        message = "You lose! Paper beats Rock";
-    
-    return message
+    if (getPlayerChoice == computerSelection) {
+        console.log("Oh! It's a tie");
+ }  
+ 
+    else if (getPlayerChoice == "rock" && computerSelection == "paper") {
+        console.log('You lose! Paper beats rock');
  }
+
+    else if (getPlayerChoice == "paper" && computerSelection == "rock") {
+        console.log('You win! Paper beats rock');
 }
 
+    else if (getPlayerChoice == "paper" && computerSelection == "scissors") {
+        console.log('You lose! Scissors beats Paper');
+}
+
+    else if (getPlayerChoice == "scissors" && computerSelection == "paper") {
+        console.log('You win! Scissors beats Paper');
+}
+
+    else if (getPlayerChoice == "scissors" && computerSelection == "rock") {
+        console.log('You lose! Rock beats scissors');
+}
+    else if (getPlayerChoice == "rock" && computerSelection == "scissors") {
+        console.log('You win! Rock beats scissors');
+}
+} 
 
 function game() {
+    
     return playRound()
 }
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 5; i++) {
     game();
 }
-
-
-console.log(game());

@@ -1,5 +1,5 @@
 # rock-paper-scissors
-I will be trying my hands on JavaScript by writing my first programm. I know it's not going to be a piece of cake, but there's no turning back now!
+I will be trying my hands on JavaScript by writing my first program. I know it's not going to be a piece of cake, but there's no turning back now!
 
 So far so good, I've successfully completed the Rock-Paper-Scissors project using my own approach and the problem solving skills learnt through the Odin Project.
 
